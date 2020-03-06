@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const db = require("../config/db.config");
-datarr = require("./sample");
+var item = require("./sample");
 
 let Movies = db.define(
   "movies",
@@ -52,14 +52,14 @@ let Movies = db.define(
   }
 );
 
-// Movies.sync({ force: true }).then(function() {
-//   return Movies.bulkCreate(datarr)
-//     .then(data => {
-//       console.log("successfully created table Movies");
-//       // console.log(items);
-//     })
+Movies.sync({ force: true }).then(function() {
+  return Movies.bulkCreate(item.datarr)
+    .then(data => {
+      console.log("successfully created table Movies");
+      // console.log(items);
+    })
 
-//     .catch(err => console.log(err));
-// });
+    .catch(err => console.log(err));
+});
 
 module.exports = Movies;

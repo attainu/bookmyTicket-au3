@@ -25,14 +25,14 @@ let Seats = db.define(
   }
 );
 
-// Seats.sync({ force: true }).then(function() {
-//   return Seats.bulkCreate(seats)
-//     .then(data => {
-//       console.log("successfully created table cities");
-//       // console.log(items);
-//     })
+Seats.sync({ force: true }).then(function() {
+  return Seats.bulkCreate(seats)
+    .then(data => {
+      console.log("successfully created table seatmap");
+      // console.log(items);
+    })
 
-//     .catch(err => console.log(err));
-// });
+    .catch(err => console.log(err));
+});
 
 module.exports = Seats;

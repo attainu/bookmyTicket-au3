@@ -492,4 +492,4 @@ fetch(
   })
   .catch(err => console.log(err));
 
-module.exports = datarr;
+module.exports = { datarr, items };

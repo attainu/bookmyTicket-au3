@@ -22,17 +22,17 @@ const Signup = db.define(
   }
 );
 
-// Signup.sync({ force: true }).then(function() {
-//   return Signup.create({
-//     number: "7000790258",
-//     email: "rohit@gmail.com",
-//     password: "Zgv674",
-//     username: "mv007"
-//   })
-//     .then(data => {
-//       console.log("signup table created ");
-//     })
-//     .catch(err => console.log(err));
-// });
+Signup.sync({ force: true }).then(function() {
+  return Signup.create({
+    number: "7000790258",
+    email: "rohit@gmail.com",
+    password: "Zgv674",
+    username: "mv007"
+  })
+    .then(data => {
+      console.log("signup table created ");
+    })
+    .catch(err => console.log(err));
+});
 
 module.exports = Signup;
