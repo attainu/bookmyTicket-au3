@@ -1,11 +1,5 @@
 const Sequelize = require("sequelize");
 
-module.exports = new Sequelize("bookmydb", "postgres", "hashim", {
-  host: "localhost",
-  dialect: "postgres",
-  pool: {
-    max: 9,
-    min: 0,
-    idle: 10000
-  }
-});
+module.exports = new Sequelize(
+  "postgres://uhpulerr:Dxn51OBKH3z5TY4bybEJ4Nl66bevIFDb@drona.db.elephantsql.com:5432/uhpulerr"
+);

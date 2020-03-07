@@ -25,12 +25,12 @@ let Theatres = db.define(
   }
 );
 
-Theatres.sync({ force: true }).then(function() {
-  return Theatres.bulkCreate(item.items)
-    .then(data => {
-      console.log("successfully created table theatres");
-    })
+// Theatres.sync({ force: true }).then(function() {
+//   return Theatres.bulkCreate(item.items)
+//     .then(data => {
+//       console.log("successfully created table theatres");
+//     })
 
-    .catch(err => console.log(err));
-});
+//     .catch(err => console.log(err));
+// });
 module.exports = Theatres;

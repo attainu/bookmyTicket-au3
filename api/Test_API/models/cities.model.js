@@ -21,14 +21,14 @@ let Cities = db.define(
   }
 );
 
-Cities.sync({ force: true }).then(function() {
-  return Cities.bulkCreate(cities)
-    .then(data => {
-      console.log("successfully created table cities");
-      // console.log(items);
-    })
+// Cities.sync({ force: true }).then(function() {
+//   return Cities.bulkCreate(cities)
+//     .then(data => {
+//       console.log("successfully created table cities");
+//       // console.log(items);
+//     })
 
-    .catch(err => console.log(err));
-});
+//     .catch(err => console.log(err));
+// });
 
 module.exports = Cities;

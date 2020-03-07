@@ -52,14 +52,14 @@ let Movies = db.define(
   }
 );
 
-Movies.sync({ force: true }).then(function() {
-  return Movies.bulkCreate(item.datarr)
-    .then(data => {
-      console.log("successfully created table Movies");
-      // console.log(items);
-    })
+// Movies.sync({ force: true }).then(function() {
+//   return Movies.bulkCreate(item.datarr)
+//     .then(data => {
+//       console.log("successfully created table Movies");
+//       // console.log(items);
+//     })
 
-    .catch(err => console.log(err));
-});
+//     .catch(err => console.log(err));
+// });
 
 module.exports = Movies;
