@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
 const cors = require("cors");
-
+const path = require("path");
 var authRouter = require("./routes/auth");
 var SignupRouter = require("./routes/usersignup");
 // Post = require("./models/model.post");
@@ -35,6 +35,19 @@ app.use("/userSignup", SignupRouter);
 
 //Port
 const port = process.env.PORT || 5000;
+const ENV = process.env.NODE_ENV;
+if (ENV === "production") {
+  app.use(
+    express.static(
+      path.join(__dirname, "../../client/bookmyticket_client/build")
+    )
+  );
+  app.use((req, res) => {
+    res.send(
+      path.join(__dirname, "../../client/bookmyticket_client/build/index.html")
+    );
+  });
+}
 app.listen(port, () => {
   console.log(`Runnning on ${port}`);
 });

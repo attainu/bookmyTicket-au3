@@ -45,21 +45,23 @@ class Carousel extends React.Component {
         <Flickity options={flickityOptions} className={"carousel"}>
           {images.map((item, index) => {
             return (
-              <ReactPlaceholder
-                showLoadingAnimation
-                type="rect"
-                ready={true}
-                color="#E0E0E0"
-                style={{ width: "768px", height: "300px" }}
-              >
-                <div className="flickity-container" key={index}>
-                  <img
-                    className="carousel-img"
-                    data-flickity-lazyload={item}
-                    alt="img"
-                  />
-                </div>
-              </ReactPlaceholder>
+              <div key={index}>
+                <ReactPlaceholder
+                  showLoadingAnimation
+                  type="rect"
+                  ready={true}
+                  color="#E0E0E0"
+                  style={{ width: "768px", height: "300px" }}
+                >
+                  <div className="flickity-container">
+                    <img
+                      className="carousel-img"
+                      data-flickity-lazyload={item}
+                      alt="img"
+                    />
+                  </div>
+                </ReactPlaceholder>
+              </div>
             );
           })}
 

@@ -78,7 +78,7 @@ const Home = () => {
             <div className="list-item-scroll">
               {apiData.map((item, index) => {
                 return (
-                  <div className="card-wrap-first" key={index}>
+                  <div className="card-wrap-first" key={item.id}>
                     <div>
                       <PosterCard
                         img={item.poster_path}
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="list-item-scroll">
               {apiData.map((item, index) => {
                 return (
-                  <div className="card-wrap-first" key={index}>
+                  <div className="card-wrap-first" key={item.id}>
                     <div>
                       <PosterCard
                         img={item.poster_path}

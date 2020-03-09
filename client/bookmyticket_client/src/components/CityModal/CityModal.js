@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Modal from "react-bootstrap/Modal";
 import { MainContext } from "../App";
 const CityModal = props => {
@@ -12,8 +12,8 @@ const CityModal = props => {
         maincontext.dispatcher({ type: "Set City", payload: city });
         let movies = [];
         result.theatres.map(item => {
-          item.movies.map(item => {
-            movies.push(item);
+          return item.movies.map(item => {
+            return movies.push(item);
           });
         });
         maincontext.dispatcher({ type: "Fetch Upcoming", payload: movies });
@@ -133,7 +133,7 @@ const CityModal = props => {
                   handleClose("Bangaluru");
                 }}
                 id="Layer_5"
-                enable-background="new 0 0 64 64"
+                enableBackground="new 0 0 64 64"
                 height="40pt"
                 viewBox="0 0 64 64"
                 width="48pt"

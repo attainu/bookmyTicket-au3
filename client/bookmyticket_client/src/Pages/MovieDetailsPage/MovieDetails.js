@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import PosterSlider from "../../components/SecondarySlider/PosterSlider";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "semantic-ui-css/semantic.min.css";
 import "react-multi-carousel/lib/styles.css";
@@ -66,7 +67,9 @@ const MovieDetail = props => {
         <div className="md-page-image-overlay"></div>
         <div className="md-ratings-bookticket">
           <h2>Vote Count: {movie.vote_count}</h2>
-          <button className="ticket-button">Book Tickets</button>
+          <Link to={`/bookticket/${movie.id}`}>
+            <button className="ticket-button">Book Tickets</button>
+          </Link>
         </div>
         <div className="md-page-info-wrapper">
           {/* conatiner starts */}

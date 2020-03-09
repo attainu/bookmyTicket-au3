@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -35,7 +35,7 @@ const PrimaryNav = () => {
         variant="dark"
         className="primary-nav"
       >
-        <Navbar.Brand href="#home" className="ml-lg-5">
+        <Navbar.Brand className="ml-lg-5">
           <Link to="/" style={{ textDecoration: "none" }}>
             {" "}
             <Logo />
@@ -67,16 +67,16 @@ const PrimaryNav = () => {
               {maincontext.state.city}
             </Nav.Link>
             <CityModal />
-            <Nav.Link className=" pr-lg-3">
+            <div className=" pr-lg-3 py-sm-2">
               <NavDropdown
                 title="Hello!"
                 id="basic-nav-dropdown"
                 className="primary-link"
               >
-                <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">action</NavDropdown.Item>
+                <NavDropdown.Item>Profile</NavDropdown.Item>
+                <NavDropdown.Item>action</NavDropdown.Item>
               </NavDropdown>
-            </Nav.Link>
+            </div>
           </Nav>
           <Nav className="mr-lg-5">
             <Button

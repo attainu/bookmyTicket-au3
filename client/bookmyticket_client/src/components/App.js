@@ -13,6 +13,7 @@ import Buzz from "../Pages/Buzz/Buzz";
 import MovieDetail from "../Pages/MovieDetailsPage/MovieDetails";
 import Login from "./Login-Signup/Login";
 import Signup from "./Login-Signup/SignUp";
+import SeatLayout from "../Pages/SeatLayout/SeatLayout";
 export const MainContext = React.createContext();
 const initialState = {
   modalShow: true,
@@ -79,6 +80,7 @@ function App() {
             <Route path="/events" component={Events} />
             <Route path="/buzz" component={Buzz} />
             <Route path="/details/:movieid" component={MovieDetail} />
+            <Route path="/bookticket/:movieid" component={SeatLayout} />
           </Switch>
           {doRedirect()}
         </Router>

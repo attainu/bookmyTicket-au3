@@ -8,9 +8,9 @@ const Movies = () => {
   const maincontext = useContext(MainContext);
   const [upcoming, setUpcoming] = useState(false);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    console.log(maincontext.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log(maincontext.state);
+  // }, []);
   const handleCominSoon = () => {
     setLoading(true);
     fetch(

@@ -4,7 +4,7 @@ import Carousel from "react-multi-carousel";
 import "semantic-ui-css/semantic.min.css";
 import "react-multi-carousel/lib/styles.css";
 import PosterCard from "../PosterCard/PosterCard";
-const APIKEY = process.env.REACT_APP_API_KEY;
+// const APIKEY = process.env.REACT_APP_API_KEY;
 export default function PosterSlider(props) {
   const [details, setDetails] = useState([]);
   // const [ready, setReady] = useState(false);
@@ -60,15 +60,17 @@ export default function PosterSlider(props) {
       >
         {state.map(item => {
           return (
-            <PosterCard
-              img={item.poster_path}
-              title={item.title}
-              language={item.language}
-              vote={item.vote_count}
-              like={item.vote_average}
-              ready={ready}
-              id={item.moviesid}
-            />
+            <div key={item.moviesid}>
+              <PosterCard
+                img={item.poster_path}
+                title={item.title}
+                language={item.language}
+                vote={item.vote_count}
+                like={item.vote_average}
+                ready={ready}
+                id={item.moviesid}
+              />
+            </div>
           );
         })}
       </Carousel>

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import FormControl from "react-bootstrap/FormControl";
+import React, { useState } from "react";
+// import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+// import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -12,14 +12,14 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "../Header/Logo";
 import desktopImage from "../../assets/images/back.jpg";
-import mobileImage from "../../assets/images/image1.jpg";
-import contactus from "../../assets/images/contactus.png";
+// import mobileImage from "../../assets/images/image1.jpg";
+// import contactus from "../../assets/images/contactus.png";
 import axios from "axios";
 
-function Login(props) {
+function Login() {
   const history = useHistory();
   const { register, handleSubmit, errors } = useForm();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const onSubmit = data => {
     console.log(data);
