@@ -9,3 +9,5 @@ To run frontend
 cd client/bookmyticket_client
 
 npm start
+
+App Link: https://bookmyticket-app-movies.herokuapp.com/
